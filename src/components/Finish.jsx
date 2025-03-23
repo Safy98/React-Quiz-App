@@ -1,4 +1,10 @@
-function Finish({points,totalPoints,highscore , dispatch}) {
+
+import {useQuiz} from "../contexts/QuizContext";
+
+
+function Finish() {
+    const {points,totalPoints,highscore , dispatch} = useQuiz();
+
     const percentage = (points / totalPoints ) * 100;
     return (
         <>
